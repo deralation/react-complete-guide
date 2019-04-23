@@ -6,7 +6,7 @@ import UserOutput from './User/UserOutput.js';
 class App extends Component {
 
   state = {
-    username: '',
+    username: 'supergokhan',
   }
 
   userNameHandler = (event) => {
@@ -34,7 +34,10 @@ class App extends Component {
         </ol>
 
         <h1>Hi, This the first assignment of react app.</h1>
-        <UserInput changed={this.userNameHandler}/>
+        <UserInput 
+          changed={this.userNameHandler}
+          currentName={this.state.username}
+        />
         <UserOutput userName={this.state.username}/>
         <UserOutput userName={this.state.username}/>
       </div>
