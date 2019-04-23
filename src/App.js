@@ -5,11 +5,18 @@ import UserOutput from './User/UserOutput.js';
 
 class App extends Component {
 
+  userNameHandler = (event) => {
+    console.log(event.target.value);
+    this.setState({
+      username: event.target.value,
+    })
+  }
+
   render() {
     return (
       <div className="App">
         <h1>Hi, This the first assignment of react app.</h1>
-        <UserInput/>
+        <UserInput changed={this.userNameHandler}/>
         <UserOutput/>
       </div>
     );

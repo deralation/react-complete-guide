@@ -3,7 +3,7 @@ import React from 'react';
 const userOutput = (props) => {
     return(
         <div>
-            <p>First Paragraph</p> 
+            <p>User username is {props.username}</p> 
             <p>Second Paragrap</p>
         </div>   
     )
