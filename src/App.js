@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Validation from 'ValidationComponent';
 
 class App extends Component {
 
@@ -28,6 +29,7 @@ class App extends Component {
         value={this.state.userInput}>
         </input>
         <p>{this.state.userInput}</p>
+        <Validation inputLength={this.state.userInput.length}/>
       </div>
     );
     //return React.createElement('div', {className: 'App'}, React.createElement('h1',null,'Hi, I\'m a React App!!!!!!!'));
