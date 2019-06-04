@@ -22,6 +22,7 @@ class App extends Component {
 
   static getDerivedStateFromProps(props, state){
     console.log('[App.js] getDeviredStateFromProps');
+    console.log(props);
     return state;
   }
 
@@ -31,6 +32,15 @@ class App extends Component {
 
   componentDidMount() {
     console.log('[App.js] componentDidMount');
+  }
+
+  shouldComponentUpdate(nextProps, nextState){
+    console.log('[App.js] shouldComponentUpdate');
+    return true;
+  }
+
+  componentDidUpdate() {
+    console.log('[App.js] componentDidUpdate');
   }
 
   nameChangedHandler = (event,id) => {

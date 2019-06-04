@@ -19,7 +19,7 @@ class Persons extends Component {
 
     componentDidUpdate(previousProps, previousState, snapShot){
         console.log('[persons.js] componentDidUpdate');
-        console.log("Snapshot");
+        console.log(snapShot);
     }
 
     render(){
