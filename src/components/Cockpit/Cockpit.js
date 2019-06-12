@@ -15,6 +15,14 @@ const cockpit = (props) => {
         };
     }, []);
 
+    useEffect(()=>{
+        console.log('[Cockpit.js] 2.useEffect'); 
+
+        return () => {
+            console.log("[Cockpit.js] cleanup work in 2.useEffect.");
+        };
+    })
+
     const assignedClasses = [];
 
     let btnClass = '';
