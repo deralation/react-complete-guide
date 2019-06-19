@@ -31,7 +31,9 @@ class Persons extends Component {
         console.log('[persons.js] componentDidUpdate');
         console.log(snapShot); debugger;
     }
-
+    /*
+     * It will be used to cancel any outgoing network requests, or remove all event listeners associted with the component.
+    */
     componentWillUnmount(){
         console.log("[Persons.js] componenetWillUnmount");
     }
