@@ -20,7 +20,10 @@ class App extends Component {
     showPersons: false,
     showCockpit: true
   }
-
+  // getDeviredStateFromProps Lifecycle: Executed before rendering on the initial mount and all component updates.
+  // Used to update the state based on changes in props over time. Has rare use cases, like tracking the component animations during the lifecycle.
+  // There are only few cases where this make sense to use over other lifecycle methods. It expects to return to object that will be the the new state, or null to update the new state.
+  // This method does not have to access to the component instance either
   static getDerivedStateFromProps(props, state){
     console.log('[App.js] getDeviredStateFromProps');
     console.log(props);
@@ -32,17 +35,25 @@ class App extends Component {
     console.log('App.js component will mount');
   }*/
 
+  /* 
+    Executed after the first rendering and here all AJAX Requests, DOM or state updates, and set up eventListeners should occurs.
+  */
   componentDidMount() {
     console.log('[App.js] componentDidMount');
   }
-
+  /* 
+    Determines if the component will be updated or not. By default it returns true. If you are sure that the component does not need to render after state or props are updated.
+    you can return false value. It is a great place to improve performance as it allows you to prevent a rerender if component receives new prop.
+  */
   shouldComponentUpdate(nextProps, nextState){
     console.log('[App.js] shouldComponentUpdate');
     console.log(nextProps);
     console.log(nextState);
     return true;
   }
-
+  /* 
+    Mostly it is used to update the DOM in response to prop or state changing
+  */
   componentDidUpdate() {
     console.log('[App.js] componentDidUpdate');
   }

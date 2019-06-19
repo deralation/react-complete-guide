@@ -17,7 +17,9 @@ class Persons extends Component {
             return false;
         }
     }
-
+    /*
+        Invoked right after a component render happens because of an update. before componentDidUpdate. Any value returned from this method will be passed to componentDidUpdate.
+    */
     getSnapshotBeforeUpdate(previousProps, previousState){
         console.log('[persons.js] getSnapshotBeforeUpdate');
         console.log(previousProps);
