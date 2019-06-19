@@ -29,7 +29,7 @@ class Persons extends Component {
 
     componentDidUpdate(previousProps, previousState, snapShot){
         console.log('[persons.js] componentDidUpdate');
-        console.log(snapShot); debugger;
+        console.log(snapShot);
     }
     /*
      * It will be used to cancel any outgoing network requests, or remove all event listeners associted with the component.
