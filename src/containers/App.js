@@ -20,6 +20,7 @@ class App extends Component {
     showPersons: false,
     showCockpit: true
   }
+  
   // getDeviredStateFromProps Lifecycle: Executed before rendering on the initial mount and all component updates.
   // Used to update the state based on changes in props over time. Has rare use cases, like tracking the component animations during the lifecycle.
   // There are only few cases where this make sense to use over other lifecycle methods. It expects to return to object that will be the the new state, or null to update the new state.
