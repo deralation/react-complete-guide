@@ -6,6 +6,7 @@ import classes from './Person.css';
 
 class Person extends Component {
     constructor() {
+        super();
         this.inputElement = React.createRef();
     }
     
