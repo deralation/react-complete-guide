@@ -27,8 +27,8 @@ class Person extends Component {
                     ref={(inputEl)=>(this.inputElement = inputEl)}
                     type="text" 
                     onChange={this.props.changed} 
-                    value={this.props.name}>
-                </input>
+                    value={this.props.name}
+                />
             </Aux>
         )
     }
