@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import classes from './Cockpit.css';
 
 const cockpit = (props) => {
+    
     const toggleButtonRef = useRef(null);
 
     useEffect(() => {
@@ -10,9 +11,7 @@ const cockpit = (props) => {
         //setTimeout(()=> { 
         //    alert ('Saved data to cloud!')
         //}, 1000);
-
         toggleButtonRef.current.click();
-        
         return () => {
             console.log("[Cockpit.js] cleanup work in useEffect.");
         };
@@ -20,7 +19,6 @@ const cockpit = (props) => {
 
     useEffect(()=>{
         console.log('[Cockpit.js] 2.useEffect'); 
-
         return () => {
             console.log("[Cockpit.js] cleanup work in 2.useEffect.");
         };
