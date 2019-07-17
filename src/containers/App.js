@@ -97,7 +97,8 @@ class App extends Component {
   }
 
   loginHandler = () => {
-
+    this.setState({authenticated: true});
+    console.log(this.state.authenticated);
   }
 
   render() {
@@ -111,6 +112,7 @@ class App extends Component {
             persons={this.state.persons}
             clicked={this.deletePersonHandler}
             changed={this.nameChangedHandler}
+            isAuthenticated={this.state.authenticated}
            />
       );
     }
